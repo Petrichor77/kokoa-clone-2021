@@ -1,0 +1,7 @@
+:root {
+  --yellow: #fae100;
+  --horizontal-space: 25px;
+  --icon-color: #2e363e;
+  --main-border: 1px solid rgba(0, 0, 0, 0.08);
+  --text-gray: rgba(0, 0, 0, 0.4);
+}
