@@ -5,20 +5,19 @@
 
 #chat-screen .status-bar {
   background-color: #abc1d1;
-  z-index: 2;
 }
 
 #chat-screen .alt-header {
   position: fixed;
-  width: 750px;
   box-sizing: border-box;
   background-color: #abc1d1;
+  z-index: 10;
   top: 0px;
 }
 
 @keyframes fadein {
   from {
-    transform: translateY(40px);
+    transform: translateY(20px);
     opacity: 0;
   }
   to {
@@ -53,30 +52,33 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.message-row {
   animation: fadein 0.5s linear;
 }
 
 .chat-timestamp {
-  margin-top: 200px;
-  padding: 15px 25px;
+  margin-top: 80px;
+  padding: 10px 15px;
   border-radius: 25px;
   background-color: #92a4b2;
   color: white;
-  font-size: 24px;
-  margin-bottom: 40px;
+  font-size: 12px;
+  margin-bottom: 20px;
 }
 
 .message-row {
   display: flex;
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .message-row img {
-  width: 80px;
-  height: 80px;
-  border-radius: 30px;
-  margin-right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 18px;
+  margin-right: 10px;
 }
 
 .message__author {
@@ -93,18 +95,18 @@
 }
 .message__bubble {
   background-color: white;
-  padding: 20px;
-  font-size: 34px;
-  border-radius: 25px;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 15px;
   border-top-left-radius: 0;
 }
 .message__time {
-  margin: 0 10px;
+  margin: 0 5px;
 }
 .message__time,
 .message__author {
   color: var(--text-gray);
-  font-size: 24px;
+  font-size: 16px;
 }
 
 .message-row--own {
@@ -114,25 +116,25 @@
 .message-row--own .message__bubble {
   background-color: var(--yellow);
   border-top-right-radius: 0;
-  border-top-left-radius: 25px;
+  border-top-left-radius: 15px;
 }
 
 .message-row--own .message__info {
   opacity: 0;
   flex-direction: row-reverse;
   animation: fadeside-reverse 0.5s linear forwards;
-  animation-delay: 1s;
+  animation-delay: 0.8s;
 }
 
 .reply {
   position: fixed;
   bottom: 0;
-  width: 750px;
+  width: 100%;
   background-color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 30px;
+  padding: 3px 15px;
   transition: all 0.3s ease-in-out;
 }
 
@@ -146,12 +148,12 @@
 }
 
 .reply input {
-  height: 70px;
+  height: 46px;
   width: 100%;
   border: var(--main-border);
-  border-radius: 35px;
-  font-size: 24px;
-  padding-left: 24px;
+  border-radius: 23px;
+  font-size: 18px;
+  padding-left: 18px;
   transition: all 0.3s ease-in-out;
 }
 .reply input::placeholder {
@@ -160,21 +162,21 @@
 
 .reply__column:last-child button {
   position: absolute;
-  right: 5px;
-  top: 4px;
-  font-size: 35px;
+  right: 2px;
+  top: 2px;
+  font-size: 20px;
   background-color: var(--yellow);
   border: none;
-  width: 60px;
-  height: 60px;
-  border-radius: 30px;
+  width: 44px;
+  height: 44px;
+  border-radius: 22px;
 }
 
 .reply__column:last-child > i {
   position: absolute;
-  right: 90px;
-  top: 15px;
-  font-size: 40px;
+  right: 60px;
+  top: 10px;
+  font-size: 30px;
   color: var(--text-gray);
 }
 
@@ -184,7 +186,7 @@
 }
 
 .reply__column:first-child i {
-  font-size: 50px;
+  font-size: 30px;
   color: var(--text-gray);
 }
 
@@ -200,10 +202,10 @@
 }
 
 .reply:focus-within input {
-  width: 700px;
-  transform: translateX(-11%) translateY(-100px);
+  width: 110%;
+  transform: translateX(-10%) translateY(-120px);
 }
 
 .reply:focus-within {
-  transform: translateY(100px);
+  transform: translateY(120px);
 }
